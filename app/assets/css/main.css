@@ -1,0 +1,72 @@
+@import "./base.css";
+@import "./variables.css";
+@import "./components/menu.css";
+@import "./components/timeline.css";
+@import "typography.css";
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 0;
+}
+
+#page-wrap {
+  padding: 0 6rem;
+
+  .hero {
+    padding-top: 6rem;
+    p {
+      font-size: 2rem;
+      line-height: 2.8rem;
+    }
+
+    h1 {
+      font-size: 4rem;
+      line-height: 4rem;
+      font-weight: 300;
+    }
+
+    .hero-text {
+      font-size: 1.6rem;
+      font-weight: 300;
+    }
+  }
+}
+
+.text-light {
+  font-weight: 300;
+}
+
+a {
+  color: var(--linkColor);
+  transition: color 1s;
+  text-decoration: none;
+
+  &:any-link {
+    color: var(--linkColor);
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: color(var(--linkColor) blackness(-50%));
+    text-decoration: underline;
+  }
+}
+
+section {
+  @apply .py-4;
+}
+
+.section-title {
+  padding-bottom: 1rem;
+  border-bottom: .1rem solid config('colors.black');
+
+  .svg-inline--fa {
+    margin-right: 1rem;
+  }
+}
