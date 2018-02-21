@@ -1,7 +1,7 @@
 import { put, take, all, call } from 'redux-saga/effects';
 import Data from '../api/Data';
 
-export function* fetchNumber () {
+export function* fetchProfile () {
     try {
         yield put({ type: 'FETCH_DATA' });
         const api = new Data();
@@ -15,7 +15,7 @@ export function* fetchNumber () {
 
 export function* watchAsync () {
     yield take('FETCH_DATA');
-    yield call(fetchNumber);
+    yield call(fetchProfile);
 }
 
 export default function* rootSaga() {
