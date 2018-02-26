@@ -6,6 +6,7 @@ module.exports = {
         require('postcss-import'),
         require('postcss-cssnext'),
         require('precss'),
+        require('postcss-each'),
         tailwindcss('./tailwind-config.js'),
     ],
 };

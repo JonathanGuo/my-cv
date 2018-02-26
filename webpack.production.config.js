@@ -18,7 +18,7 @@ const config = {
         app: [
             'babel-polyfill',
             './index.js',
-            './assets/scss/main.scss',
+            './assets/css/main.css',
         ],
     },
 
@@ -68,18 +68,18 @@ const config = {
                 loader: 'babel-loader',
             },
             {
-                test: /\.scss$/,
+                test: /\.css$/,
                 exclude: /node_modules/,
                 use: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
                     use: [
-                        'css-loader',
                         {
-                            loader: 'sass-loader',
-                            query: {
-                                sourceMap: false,
+                            loader: 'css-loader',
+                            options: {
+                                importLoaders: 1,
                             },
                         },
+                        'postcss-loader',
                     ],
                     publicPath: '../',
                 }),

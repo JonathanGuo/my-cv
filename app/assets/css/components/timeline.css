@@ -37,7 +37,7 @@
                     height: calc(var(--timelineWidth) * 15);
                     background: #fff;
                     border-radius: 50%;
-                    border: calc(var(--timelineWidth) * 4) solid config('colors.white');
+                    border: calc(var(--timelineWidth) * 4) solid var(--bodyBackground);;
                     background: config('colors.black');
                     z-index: 10;
                 }

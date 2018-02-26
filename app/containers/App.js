@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import Experience from '../components/Experience';
+import Skillset from '../components/Skillset/index';
 import { action } from '../config/Store';
+import get from 'lodash/get';
 
 class App extends PureComponent {
     componentDidMount () {
@@ -11,6 +13,7 @@ class App extends PureComponent {
     }
 
     render () {
+        const professionalSkills = get(this.props.data, 'skills.professional', []);
         return (
             <div className="container mx-auto">
                 <div className="hero text-center">
@@ -26,12 +29,6 @@ class App extends PureComponent {
                         React, SASS/CSS3 and responsive &amp; mobile first responsive frameworks.
                     </p>
                 </div>
-                <section>
-                    <h2 className="section-title">
-                        <FontAwesomeIcon icon="wrench" />
-                        Skills
-                    </h2>
-                </section>
                 <section className="timeline">
                     <h2 className="section-title">
                         <FontAwesomeIcon icon="briefcase" />
@@ -45,6 +42,13 @@ class App extends PureComponent {
                             />
                         ))
                     }
+                </section>
+                <section>
+                    <h2 className="section-title">
+                        <FontAwesomeIcon icon="wrench" />
+                        Skills
+                    </h2>
+                    <Skillset skills={professionalSkills} />
                 </section>
             </div>
         );
@@ -60,7 +64,10 @@ App.propTypes = {
 
 App.defaultProps = {
     data: {
-        skills: [],
+        skills: {
+            professional: [],
+            personal: [],
+        },
         experiences: [],
     },
 };

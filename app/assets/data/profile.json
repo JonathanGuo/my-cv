@@ -1,118 +1,153 @@
 {
     "skills": {
         "professional": {
-            "languages": [
-                {
-                    "name": "PHP",
-                    "rating": 9
-                },
-                {
-                    "name": "JavaScript",
-                    "rating": 9
-                },
-                {
-                    "name": "HTML5",
-                    "rating": 9
-                },
-                {
-                    "name": "CSS3",
-                    "rating": 7
-                }
-            ],
-            "database": [
-                {
-                    "name": "MySQL",
-                    "rating": 8
-                },
-                {
-                    "name": "PostgreSQL",
-                    "rating": 7
-                },
-                {
-                    "name": "SQLite",
-                    "rating": 8
-                }
-            ],
-            "Frameworks / Libraries": [
-                {
-                    "name": "Laravel",
-                    "rating": 9
-                },
-                {
-                    "name": "CodeIgnitor",
-                    "rating": 6
-                },
-                {
-                    "name": "AngularJS",
-                    "rating": 9
-                },
-                {
-                    "name": "Ionic 1",
-                    "rating": 8
-                },
-                {
-                    "name": "React",
-                    "rating": 6
-                },
-                {
-                    "name": "Node.js",
-                    "rating": 4
-                }
-            ],
-            "Tools": [
-                {
-                    "name": "Gulp",
-                    "rating": 9
-                },
-                {
-                    "name": "Webpack",
-                    "rating": 6
-                },
-                {
-                    "name": "Git",
-                    "rating": 7
-                }
-            ],
-            "Other": [
-                {
-                    "name": "Linux / OSX / Ubuntu / CentOS",
-                    "rating": 6
-                },
-                {
-                    "name": "Photoshop",
-                    "rating": 4
-                }
-            ]
+            "languages": {
+                "icon": "code",
+                "data": [
+                    {
+                        "name": "PHP",
+                        "icon": ["fab", "php"],
+                        "rating": 9
+                    },
+                    {
+                        "name": "JavaScript",
+                        "icon": ["fab", "js"],
+                        "rating": 9
+                    },
+                    {
+                        "name": "HTML5",
+                        "icon": ["fab", "html5"],
+                        "rating": 9
+                    },
+                    {
+                        "name": "CSS3",
+                        "icon": ["fab", "css3-alt"],
+                        "rating": 7
+                    }
+                ]
+            },
+            "database": {
+                "icon": "database",
+                "data": [
+                    {
+                        "name": "MySQL",
+                        "image": "dbs_mysql.png",
+                        "rating": 8
+                    },
+                    {
+                        "name": "PostgreSQL",
+                        "image": "dbs_postgresql.png",
+                        "rating": 7
+                    },
+                    {
+                        "name": "SQLite",
+                        "image": "dbs_sqlite.png",
+                        "rating": 8
+                    }
+                ]
+            },
+            "Frameworks / Libraries": {
+                "icon": "coffee",
+                "data": [
+                    {
+                        "name": "Laravel",
+                        "icon": ["fab", "laravel"],
+                        "rating": 9
+                    },
+                    {
+                        "name": "CodeIgnitor",
+                        "image": "codeigniter.svg",
+                        "rating": 6
+                    },
+                    {
+                        "name": "AngularJS",
+                        "icon": ["fab", "angular"],
+                        "rating": 9
+                    },
+                    {
+                        "name": "Ionic 1",
+                        "image": "ionic.svg",
+                        "rating": 8
+                    },
+                    {
+                        "name": "React",
+                        "icon": ["fab", "react"],
+                        "rating": 7
+                    },
+                    {
+                        "name": "Node.js",
+                        "icon": ["fab", "node"],
+                        "rating": 4
+                    }
+                ]
+            },
+            "Tools": {
+                "icon": "wrench",
+                "data": [
+                    {
+                        "name": "Gulp",
+                        "icon": ["fab", "gulp"],
+                        "rating": 9
+                    },
+                    {
+                        "name": "Webpack",
+                        "rating": 6
+                    },
+                    {
+                        "name": "Git",
+                        "rating": 7
+                    }
+                ]
+            },
+            "Other": {
+                "icon": "fire",
+                "data": [
+                    {
+                        "name": "Linux / OSX / Ubuntu / CentOS",
+                        "rating": 6
+                    },
+                    {
+                        "name": "Photoshop",
+                        "rating": 4
+                    }
+                ]
+            }
         },
         "personal": {
-            "Generals": [
-                {
-                    "name": "Creativity",
-                    "rating": 9
-                },
-                {
-                    "name": "Team work",
-                    "rating": 9
-                },
-                {
-                    "name": "Communication",
-                    "rating": 9
-                },
-                {
-                    "name": "Hard work",
-                    "rating": 9
-                }
-            ],
-            "Languages": [
-                {
-                    "name": "English (Daily use)",
-                    "rating": 8
-                },
-                {
-                    "name": "Chinese (Native)",
-                    "rating": 9
-                }
-            ]
+            "Generals": {
+                "icon": "bolt",
+                "data": [
+                    {
+                        "name": "Creativity",
+                        "rating": 9
+                    },
+                    {
+                        "name": "Team work",
+                        "rating": 9
+                    },
+                    {
+                        "name": "Communication",
+                        "rating": 9
+                    },
+                    {
+                        "name": "Hard work",
+                        "rating": 9
+                    }
+                ]
+            },
+            "Languages": {
+                "icon": "language",
+                "data": [
+                    {
+                        "name": "English (Daily use)",
+                        "rating": 8
+                    },
+                    {
+                        "name": "Chinese (Native)",
+                        "rating": 9
+                    }
+                ]
+            }
         }
     },
     "experiences": [

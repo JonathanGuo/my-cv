@@ -2,6 +2,7 @@
 @import "./variables.css";
 @import "./components/menu.css";
 @import "./components/timeline.css";
+@import "./components/skillset.css";
 @import "typography.css";
 
 html,
@@ -12,6 +13,10 @@ body {
 body {
   font-family: 'Source Sans Pro', sans-serif;
   margin: 0;
+}
+
+#root {
+  background-color: var(--bodyBackground);
 }
 
 #page-wrap {

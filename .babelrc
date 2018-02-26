@@ -1,6 +1,17 @@
 {
   "presets": [
-    ["env"],
+    [
+      "env",
+      {
+        "targets": {
+          "safari": 10,
+          "browsers": [
+            "last 2 versions",
+            "ie >= 7"
+          ]
+        },
+      }
+    ],
     "stage-2",
     "react",
     "react-boilerplate"

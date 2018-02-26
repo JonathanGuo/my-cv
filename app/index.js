@@ -2,10 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 import fontawesome from '@fortawesome/fontawesome';
-import { faExternalLinkAlt, faBriefcase, faWrench } from '@fortawesome/fontawesome-free-solid';
+import fontawesomeFreeSolid from '@fortawesome/fontawesome-free-solid';
+import fontawesomeFreeBrands from '@fortawesome/fontawesome-free-brands';
 import Root from './config/Root';
 
-fontawesome.library.add(faExternalLinkAlt, faBriefcase, faWrench);
+fontawesome.library.add(fontawesomeFreeSolid, fontawesomeFreeBrands);
 
 const render = (Component) => {
     ReactDOM.render(
