@@ -7,22 +7,26 @@
                     {
                         "name": "PHP",
                         "icon": ["fab", "php"],
-                        "rating": 9
+                        "rating": 9,
+                        "experienceFrom": "2009-06-01"
                     },
                     {
                         "name": "JavaScript",
                         "icon": ["fab", "js"],
-                        "rating": 9
+                        "rating": 9,
+                        "experienceFrom": "2005-06-01"                        
                     },
                     {
-                        "name": "HTML5",
+                        "name": "HTML4/5",
                         "icon": ["fab", "html5"],
-                        "rating": 9
+                        "rating": 9,
+                        "experienceFrom": "2003-01-01"  
                     },
                     {
-                        "name": "CSS3",
+                        "name": "CSS/CSS3",
                         "icon": ["fab", "css3-alt"],
-                        "rating": 7
+                        "rating": 7,
+                        "experienceFrom": "2006-01-01"  
                     }
                 ]
             },
@@ -30,19 +34,22 @@
                 "icon": "database",
                 "data": [
                     {
-                        "name": "MySQL",
-                        "image": "dbs_mysql.png",
-                        "rating": 8
-                    },
-                    {
                         "name": "PostgreSQL",
                         "image": "dbs_postgresql.png",
-                        "rating": 7
+                        "rating": 7,
+                        "tooltip": "Daily use database. My favourite DB."
+                    },
+                    {
+                        "name": "MySQL",
+                        "image": "dbs_mysql.png",
+                        "rating": 8,
+                        "experienceFrom": "2009-01-01"
                     },
                     {
                         "name": "SQLite",
                         "image": "dbs_sqlite.png",
-                        "rating": 8
+                        "rating": 8,
+                        "experienceFrom": "2016-04-01"
                     }
                 ]
             },
@@ -52,32 +59,38 @@
                     {
                         "name": "Laravel",
                         "icon": ["fab", "laravel"],
-                        "rating": 9
+                        "rating": 9,
+                        "tooltip": "I've been in love with Laravel since Laravel 4. My only option for the backend at the moment."
                     },
                     {
                         "name": "CodeIgnitor",
                         "image": "codeigniter.svg",
-                        "rating": 6
+                        "rating": 6,
+                        "experienceFrom": "2012-04-24"
                     },
                     {
                         "name": "AngularJS",
                         "icon": ["fab", "angular"],
-                        "rating": 9
+                        "rating": 9,
+                        "experienceFrom": "2013-06-01"
                     },
                     {
                         "name": "Ionic 1",
                         "image": "ionic.svg",
-                        "rating": 8
+                        "rating": 8,
+                        "experienceFrom": "2016-01-01"
                     },
                     {
                         "name": "React",
                         "icon": ["fab", "react"],
-                        "rating": 7
+                        "rating": 7,
+                        "tooltip": "My favourite Front-end library. I use the combo on all my new projects."
                     },
                     {
                         "name": "Node.js",
                         "icon": ["fab", "node"],
-                        "rating": 4
+                        "rating": 4,
+                        "tooltip": "Always the best option for me to write scripts and tools to make my life easier."
                     }
                 ]
             },
@@ -87,15 +100,18 @@
                     {
                         "name": "Gulp",
                         "icon": ["fab", "gulp"],
-                        "rating": 9
+                        "rating": 9,
+                        "experienceFrom": "2016-01-01"
                     },
                     {
                         "name": "Webpack",
-                        "rating": 6
+                        "rating": 6,
+                        "experienceFrom": "2017-04-01"
                     },
                     {
                         "name": "Git",
-                        "rating": 7
+                        "rating": 7,
+                        "experienceFrom": "2012-02-01"
                     }
                 ]
             },
@@ -104,11 +120,13 @@
                 "data": [
                     {
                         "name": "Linux / OSX / Ubuntu / CentOS",
-                        "rating": 6
+                        "rating": 6,
+                        "experienceFrom": "2012-01-01"
                     },
                     {
                         "name": "Photoshop",
-                        "rating": 4
+                        "rating": 4,
+                        "experienceFrom": "2010-01-01"
                     }
                 ]
             }

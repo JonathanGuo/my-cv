@@ -22,11 +22,11 @@ class App extends PureComponent {
                         {'{ Full Stack Web Developer }'}
                     </p>
                     <p className="hero-text">
-                        I am a full stack developer who has Over five years experience within
+                        I am a full stack developer who has over six years experience within
                         <span>&nbsp;</span>
                         businesses in New Zealand.
                         Focus on web and mobile applications using Laravel, AngularJS,
-                        React, SASS/CSS3 and responsive &amp; mobile first responsive frameworks.
+                        React, Ionic, SASS/CSS3 and mobile first responsive frameworks.
                     </p>
                 </div>
                 <section className="timeline">
