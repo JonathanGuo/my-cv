@@ -157,12 +157,14 @@
                 "icon": "language",
                 "data": [
                     {
-                        "name": "English (Daily use)",
-                        "rating": 8
+                        "name": "English",
+                        "rating": 8,
+                        "tooltip": "Daily use."
                     },
                     {
-                        "name": "Chinese (Native)",
-                        "rating": 9
+                        "name": "Chinese",
+                        "rating": 9,
+                        "tooltip": "My native language."
                     }
                 ]
             }
@@ -229,6 +231,24 @@
             "description": [
                 "Team leader in a trail-produce team in charge of the products' distribution and maintenance process, including test, track and problem solving of products, and management of the database of products."
             ]
+        }
+    ],
+    "schoolarship": [
+        {
+            "date": "2006 - 2007",
+            "name": "North China Institute of Aerospace Engineering (second-class scholarship)"
+        },
+        {
+            "date": "2007",
+            "name": "Challenge Cup of North China Institute of Aerospace Engineering (second prize)"
+        },
+        {
+            "date": "2006 - 2007",
+            "name": "Challenge Cup of North China Institute of Aerospace Engineering (third-class scholarship)"
+        },
+        {
+            "date": "2006 - 2007",
+            "name": "North China Institute of Aerospace Engineering (merit student cadre)"
         }
     ]
 }

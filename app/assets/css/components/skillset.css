@@ -51,7 +51,7 @@
             }
 
             .skill-name {
-                @apply .w-32;
+                width: 9rem;
                 transition-property: color;
                 transition-duration: 200ms;
                 transition-timing-function: ease-in-out;

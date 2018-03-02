@@ -3,6 +3,7 @@ export default function Data(state = {
     data: {
         experiences: [],
         skills: {},
+        schoolarship: [],
     },
     failed: false,
     fetched: false,
