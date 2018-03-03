@@ -76,3 +76,8 @@ section {
     margin-right: 1rem;
   }
 }
+
+abbr {
+  cursor: help;
+  text-decoration: underline dotted config('colors.grey');
+}

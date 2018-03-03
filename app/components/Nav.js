@@ -1,8 +1,53 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { NavLink } from 'react-router-dom';
 import { push as Menu } from 'react-burger-menu';
 
+const navLinks = [
+    {
+        id: 'link-about-me',
+        to: '/',
+        text: 'About me',
+    },
+    {
+        id: 'link-experiences',
+        to: '/experiences',
+        text: 'Experiences',
+    },
+    {
+        id: 'link-professional-skills',
+        to: '/professional-skills',
+        text: 'Professional Skills',
+    },
+    {
+        id: 'link-personal-skills',
+        to: '/personal-skills',
+        text: 'Personal Skills',
+    },
+    {
+        id: 'link-schoolarship',
+        to: '/schoolarship-awards',
+        text: 'Schoolarship & Awards',
+    },
+];
+
 class Nav extends Component {
+    constructor (props) {
+        super(props);
+
+        this.state = {
+            menuOpen: false,
+        };
+    }
+
+    onMenuStateChange = (state) => {
+        this.setState({ menuOpen: state.isOpen });
+    }
+
+    onNavLinkClick = () => {
+        this.setState({ menuOpen: false });
+    }
+
     render () {
         const { pageWrapId, outerContainerId } = this.props;
 
@@ -10,9 +55,22 @@ class Nav extends Component {
             <Menu
                 pageWrapId={pageWrapId}
                 outerContainerId={outerContainerId}
+                isOpen={this.state.menuOpen}
+                onStateChange={this.onMenuStateChange}
             >
-                <a href="/" id="aboutMe" className="menu-item">About me</a>
-                <a href="/experience" id="aboutMe" className="menu-item">Experience</a>
+                {
+                    navLinks.map(navLink => (
+                        <NavLink
+                            {...navLink}
+                            key={navLink.id}
+                            className="menu-item"
+                            activeClassName="active"
+                            onClick={this.onNavLinkClick}
+                        >
+                            {navLink.text}
+                        </NavLink>
+                    ))
+                }
             </Menu>
         );
     }

@@ -1,5 +1,6 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
+import { hot } from 'react-hot-loader';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'react-router-redux';
 import { store, history } from './Store';
@@ -19,7 +20,10 @@ const Root = () => {
                         outerContainerId={outerContainerId}
                     />
                     <main id={pageWrapId}>
-                        <Route path="/" component={App} />
+                        <Switch>
+                            <Route exact path="/" component={App} />
+                            <Route path="/:section" component={App} />
+                        </Switch>
                     </main>
                 </div>
             </ConnectedRouter>
@@ -27,4 +31,4 @@ const Root = () => {
     );
 };
 
-export default Root;
+export default hot(module)(Root);
