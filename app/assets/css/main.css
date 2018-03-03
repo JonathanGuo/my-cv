@@ -24,7 +24,6 @@ body {
   padding: 0 6rem;
 
   .hero {
-    padding-top: 6rem;
     p {
       font-size: 2rem;
       line-height: 2.8rem;
@@ -80,4 +79,20 @@ section {
 abbr {
   cursor: help;
   text-decoration: underline dotted config('colors.grey');
+}
+
+.scroll-indicator-wrapper {
+  @apply .absolute .pin-x .pin-b .w-full .text-center;
+
+  .scroll-indicator {
+    padding: 2rem 4rem;
+    background: config('colors.black');
+    color: white;
+  }
+}
+
+button {
+  &:focus {
+    outline: 0;
+  }
 }
