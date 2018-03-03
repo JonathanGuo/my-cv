@@ -1,28 +1,18 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import moment from 'moment';
 import ReactTooltip from 'react-tooltip';
 import Particles from 'react-particles-js';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import animateScrollTo from 'animated-scroll-to';
 import particlesConfig from '../../config/particlesjs-config.json';
-
-const diffDateInyears = (from) => {
-    if (!from) {
-        return 0;
-    }
-
-    return moment().diff(moment(from), 'year');
-};
-
-const formatNZDate = date => moment(date).format('Do MMM, YYYY');
+import { diffFromNow, formatNZDate } from '../../helpers/DateHelper';
 
 const scrollToContent = () => animateScrollTo(document.getElementById('experiences'));
 
 class AboutMe extends PureComponent {
     render () {
         const { NZExperienceFrom } = this.props.data;
-        const yearsOfExperience = diffDateInyears(NZExperienceFrom);
+
         return (
             <section id="about-me" className="hero text-center min-h-screen p-0">
                 <Particles
@@ -46,8 +36,8 @@ class AboutMe extends PureComponent {
                     <div className="mt-8">
                         <p className="hero-text">
                             I am a full stack developer who has over&nbsp;
-                            <abbr data-tip={`Since ${formatNZDate(NZExperienceFrom)}`}>{yearsOfExperience} years</abbr>&nbsp;
-                            experience within
+                            <abbr data-tip={`Since ${formatNZDate(NZExperienceFrom)}`}>{diffFromNow(NZExperienceFrom)}</abbr>&nbsp;
+                            within
                             <span>&nbsp;</span>
                             businesses in New Zealand.
                             Focus on web and mobile applications using Laravel, AngularJS,

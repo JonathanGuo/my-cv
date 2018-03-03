@@ -4,42 +4,7 @@ import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import ReactTooltip from 'react-tooltip';
 import Rating from './Rating';
 import AsyncImage from '../AsyncImage';
-import moment from 'moment';
-import pluralize from 'pluralize';
-
-const now = moment();
-
-/**
- * Humanize date difference
- * @param {String} diff
- * @param {String} unit
- */
-const humanizeDateDiff = (diff, unit) => {
-    return `Over ${diff} ${pluralize.plural(unit, diff)} experience`;
-};
-
-/**
- * Get datetime difference from now
- * @param {String} datetime
- */
-const diffFromNow = (datetime) => {
-    const from = moment(datetime);
-    if (!from.isValid()) {
-        return null;
-    }
-    const diffInYears = now.diff(from, 'years');
-    if (diffInYears >= 1) {
-        return humanizeDateDiff(diffInYears, 'year');
-    }
-
-    const diffInMonths = now.diff(from, 'months');
-    if (diffInMonths >= 1) {
-        return humanizeDateDiff(diffInMonths, 'month');
-    }
-
-    const diffInDays = now.diff(from, 'days');
-    return humanizeDateDiff(diffInDays, 'day');
-};
+import { diffFromNow } from '../../helpers/DateHelper';
 
 class Skill extends PureComponent {
     getTooltip () {
