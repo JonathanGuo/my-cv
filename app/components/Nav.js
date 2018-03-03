@@ -38,15 +38,29 @@ class Nav extends Component {
         this.state = {
             menuOpen: false,
         };
-    }
 
+        this.timeoutID = null;
+    }
     onMenuStateChange = (state) => {
         this.setState({ menuOpen: state.isOpen });
     }
 
     onNavLinkClick = () => {
-        this.setState({ menuOpen: false });
+        this.closeMenu();
     }
+
+    closeMenu () {
+        if (this.timeoutID) {
+            window.clearTimeout(this.timeoutID);
+        }
+
+        // scroll animation takes 500ms to scroll to the position
+        // and then give user 500ms to react to have better experience
+        this.timeoutID = window.setTimeout(() => {
+            this.setState({ menuOpen: false });
+        }, 1000);
+    }
+
 
     render () {
         const { pageWrapId, outerContainerId } = this.props;
