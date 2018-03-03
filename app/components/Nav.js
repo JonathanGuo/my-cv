@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 import { push as Menu } from 'react-burger-menu';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 
 const navLinks = [
     {
@@ -41,6 +42,7 @@ class Nav extends Component {
 
         this.timeoutID = null;
     }
+
     onMenuStateChange = (state) => {
         this.setState({ menuOpen: state.isOpen });
     }
@@ -61,7 +63,6 @@ class Nav extends Component {
         }, 1000);
     }
 
-
     render () {
         const { pageWrapId, outerContainerId } = this.props;
 
@@ -80,11 +81,25 @@ class Nav extends Component {
                             className="menu-item"
                             activeClassName="active"
                             onClick={this.onNavLinkClick}
+                            exact={true}
                         >
                             {navLink.text}
                         </NavLink>
                     ))
                 }
+
+                <a
+                    href="https://github.com/jonathanGuo/my-cv"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bottom-links"
+                >
+                    <FontAwesomeIcon
+                        className="mr-2"
+                        icon={['fab', 'github']}
+                    />
+                    View the code
+                </a>
             </Menu>
         );
     }

@@ -81,6 +81,7 @@ abbr {
   text-decoration: underline dotted config('colors.grey');
 }
 
+/* Scroll indicator in splash screen */
 .scroll-indicator-wrapper {
   @apply .absolute .pin-x .pin-b .w-full .text-center;
 
@@ -91,8 +92,33 @@ abbr {
   }
 }
 
+/* Fix for Chrome button outline */
 button {
   &:focus {
     outline: 0;
+  }
+}
+
+/* Menu */
+.bm-item-list {
+  .menu-item {
+    color: white;
+  
+    &:any-link {
+      color: white;
+    }
+  
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      color: color(var(--linkColor));
+      text-decoration: none;
+    }
+
+  }
+  .bottom-links {
+    position: absolute;
+    bottom: 0;
   }
 }
