@@ -32,6 +32,7 @@ const config = {
         filename: '[name].js',
         path: resolve(__dirname, 'dist'),
         publicPath: '',
+        crossOriginLoading: 'anonymous',
     },
 
     context: resolve(__dirname, 'app'),
@@ -42,6 +43,7 @@ const config = {
         hot: true,
         contentBase: resolve(__dirname, 'build'),
         publicPath: '/',
+        historyApiFallback: true,
     },
 
     module: {
