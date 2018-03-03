@@ -203,17 +203,6 @@
             ]
         },
         {
-            "jobTitle": "Web Developer",
-            "type": "Conract",
-            "company": "Jetlab",
-            "url": "http://jetlab.com",
-            "startDate": "2012-02-27",
-            "endDate": "2012-03-16",
-            "description": [
-                "Building the website using PHP, MySQL, HTML5, CSS, and JavaScript (JQuery)."
-            ]
-        },
-        {
             "jobTitle": "Web Designer",
             "type": "Short term employment",
             "company": "Authenticate (Rebranded from Ecardz)",
@@ -228,7 +217,7 @@
             "jobTitle": "Technician",
             "type": "Permanent",
             "company": "Huawei Technologies",
-            "url": "http://ecardz.co.nz",
+            "url": "http://www.huawei.com",
             "startDate": "2008-01-01",
             "endDate": "2008-08-01",
             "description": [
