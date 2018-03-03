@@ -30,6 +30,11 @@ class Experience extends PureComponent {
                     <h3 className="title">
                         { this.props.jobTitle }, { this.props.company }
                     </h3>
+                    <p>
+                        <span className="inner-block">
+                            { this.props.type }
+                        </span>
+                    </p>
                     {
                         this.props.url &&
                         <div>
@@ -65,6 +70,7 @@ Experience.propTypes = {
         PropTypes.string,
         PropTypes.node,
     ]).isRequired,
+    type: PropTypes.string.isRequired,
 };
 
 Experience.defaultProps = {
