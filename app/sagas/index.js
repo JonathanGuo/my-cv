@@ -1,4 +1,8 @@
+/* eslint default-case: "off" */
 import { put, take, all, call } from 'redux-saga/effects';
+import moment from 'moment';
+import { push } from 'react-router-redux';
+import { store } from '../config/Store';
 import Data from '../api/Data';
 
 export function* fetchProfile () {
@@ -18,8 +22,34 @@ export function* watchAsync () {
     yield call(fetchProfile);
 }
 
+export function* handleRouteChange () {
+    yield put({ type: 'ROUTE_CHANGED', payload: moment() });
+}
+
+export function* pushRoute (payload) {
+    yield store.dispatch(push(payload.uri));
+}
+
+export function* watchRouteAsync () {
+    let locationChangedAt;
+    while (true) {
+        const action = yield take(['@@router/LOCATION_CHANGE', 'PUSH_ROUTE']);
+        switch (action.type) {
+            case '@@router/LOCATION_CHANGE':
+                locationChangedAt = moment();
+                break;
+            case 'PUSH_ROUTE':
+                if (!locationChangedAt || moment().diff(locationChangedAt, 'milliseconds') > 500) {
+                    yield call(pushRoute, action.payload);
+                }
+                break;
+        }
+    }
+}
+
 export default function* rootSaga() {
     yield all([
         watchAsync(),
+        watchRouteAsync(),
     ]);
 }

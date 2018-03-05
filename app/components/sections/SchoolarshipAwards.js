@@ -2,11 +2,14 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import Schoolarship from '../Schoolarship';
+import withSectionWayPoint from './withSectionWaypoint';
+
+const sectionName = 'schoolarship-awards';
 
 class SchoolarshipAwards extends PureComponent {
     render () {
         return (
-            <section id="schoolarship-awards">
+            <section id={sectionName}>
                 <h2 className="section-title">
                     <FontAwesomeIcon icon="heart" />
                     Schoolarship / Award Received
@@ -35,4 +38,4 @@ SchoolarshipAwards.defaultProps = {
     data: [],
 };
 
-export default SchoolarshipAwards;
+export default withSectionWayPoint(SchoolarshipAwards, sectionName);

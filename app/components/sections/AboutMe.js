@@ -6,7 +6,9 @@ import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import animateScrollTo from 'animated-scroll-to';
 import particlesConfig from '../../config/particlesjs-config.json';
 import { diffFromNow, formatNZDate } from '../../helpers/DateHelper';
+import withSectionWayPoint from './withSectionWaypoint';
 
+const sectionName = 'about-me';
 const scrollToContent = () => animateScrollTo(document.getElementById('experiences'));
 
 class AboutMe extends PureComponent {
@@ -14,7 +16,7 @@ class AboutMe extends PureComponent {
         const { NZExperienceFrom } = this.props.data;
 
         return (
-            <section id="about-me" className="hero text-center min-h-screen p-0">
+            <section id={sectionName} className="hero text-center min-h-screen p-0">
                 <Particles
                     height="100vh"
                     params={particlesConfig}
@@ -68,4 +70,4 @@ AboutMe.defaultProps = {
     data: {},
 };
 
-export default AboutMe;
+export default withSectionWayPoint(AboutMe, sectionName, '', '');
