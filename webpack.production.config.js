@@ -25,7 +25,7 @@ const config = {
     context: resolve(__dirname, 'app'),
 
     output: {
-        filename: '[name].js',
+        filename: '[name].[chunkhash].js',
         path: resolve(__dirname, 'dist'),
         publicPath: '',
     },
@@ -47,6 +47,7 @@ const config = {
             template: `${__dirname}/app/index.html`,
             filename: 'index.html',
             inject: 'body',
+            title: 'Caching',
         }),
         new webpack.optimize.OccurrenceOrderPlugin(),
         new webpack.LoaderOptionsPlugin({
