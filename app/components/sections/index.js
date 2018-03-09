@@ -3,6 +3,7 @@ import Experiences from './Experiences';
 import ProfessionalSkills from './ProfessionalSkills';
 import PersonalSkills from './PersonalSkills';
 import SchoolarshipAwards from './SchoolarshipAwards';
+import ContactMe from './ContactMe';
 
 export {
     AboutMe,
@@ -10,4 +11,5 @@ export {
     ProfessionalSkills,
     PersonalSkills,
     SchoolarshipAwards,
+    ContactMe,
 };

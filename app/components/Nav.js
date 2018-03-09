@@ -30,6 +30,11 @@ const navLinks = [
         to: '/schoolarship-awards',
         text: 'Schoolarship & Awards',
     },
+    {
+        id: 'link-contact-me',
+        to: '/contact-me',
+        text: 'Contact Me',
+    },
 ];
 
 class Nav extends Component {

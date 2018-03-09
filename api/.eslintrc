@@ -45,6 +45,7 @@
           "every": [ "id" ]
       },
       "allowChildren": false
-    }]
+    }],
+    "no-console": "off"
   }
 }

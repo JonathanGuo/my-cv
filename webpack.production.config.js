@@ -31,10 +31,14 @@ const config = {
     },
 
     plugins: [
-        new webpack.DefinePlugin(Object.assign({
-            __DEV__: false,
-            'process.env.NODE_ENV': JSON.stringify('production'),
-        }, dotEnvConfig)),
+        new webpack.DefinePlugin({
+            __DEV__: true,
+            'process.env': {
+                ...process.env,
+                NODE_ENV: JSON.stringify('development'),
+                ...dotEnvConfig,
+            },
+        }),
         new webpack.optimize.CommonsChunkPlugin({
             name: 'vendor',
             minChunks: (module) => {
