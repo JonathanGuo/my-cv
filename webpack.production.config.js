@@ -5,7 +5,9 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const dotenv = require('dotenv');
 
-const dotenvResult = dotenv.config();
+const dotenvResult = dotenv.config({
+    path: resolve(__dirname, '../../.env.production'),
+});
 const dotEnvConfig = Object.keys(dotenvResult.parsed).reduce((result, key) => ({
     ...result,
     [key]: JSON.stringify(dotenvResult.parsed[key]),

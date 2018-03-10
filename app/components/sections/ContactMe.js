@@ -193,7 +193,11 @@ class ContactMe extends Component {
                     {
                         sending &&
                         <div>
-                            <FontAwesomeIcon icon="circle-notch" spin />
+                            <FontAwesomeIcon
+                                icon="circle-notch"
+                                size="4x"
+                                spin
+                            />
                         </div>
                     }
                 </Form>
