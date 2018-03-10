@@ -10,7 +10,7 @@ export function* sendMessage (action) {
 
         yield put({ type: 'SENT_CONTACT_MESSAGE', payload: res });
     } catch (e) {
-        yield put({ type: 'SEND_CONTACT_MESSAGE_FAILED' });
+        yield put({ type: 'SEND_CONTACT_MESSAGE_FAILED', payload: e.message });
     }
 }
 

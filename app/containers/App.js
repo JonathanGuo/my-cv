@@ -33,7 +33,10 @@ class App extends PureComponent {
                 <ProfessionalSkills data={professionalSkills} />
                 <PersonalSkills data={personalSkills} />
                 <SchoolarshipAwards data={schoolarship} />
-                <ContactMe />
+                <ContactMe
+                    sending={this.props.sendingMessage}
+                    response={this.props.contactMeResponse}
+                />
             </div>
         );
     }
@@ -49,6 +52,8 @@ App.propTypes = {
     match: PropTypes.shape({
         params: PropTypes.object,
     }).isRequired,
+    sendingMessage: PropTypes.bool.isRequired,
+    contactMeResponse: PropTypes.object.isRequired,
 };
 
 App.defaultProps = {
@@ -65,4 +70,6 @@ App.defaultProps = {
 
 export default connect(store => ({
     data: store.Data.data,
+    sendingMessage: store.ContactMe.sending,
+    contactMeResponse: store.ContactMe.response,
 }))(App);

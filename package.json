@@ -1,7 +1,7 @@
 {
-  "name": "react-webpack-boilerplate",
-  "version": "2.1.0",
-  "description": "Minimalistic ES6 React boilerplate",
+  "name": "my-cv",
+  "version": "1.0.1",
+  "description": "My personal website",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server",
@@ -16,7 +16,7 @@
     "start:api": "webpack --config webpack.api.js",
     "serve:api-dev": "nodemon ./dist/api/api.js"
   },
-  "author": "Kliment Petrov <kleopetroff@gmail.com>",
+  "author": "Jonathan Guo <chc.jonathan.guo@outlook.com>",
   "license": "MIT",
   "jest": {
     "setupFiles": [
