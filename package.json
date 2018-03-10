@@ -14,6 +14,7 @@
     "precommit": "cross-env npm run lint && npm test",
     "prepush": "cross-env npm run lint && npm test",
     "start:api": "webpack --config webpack.api.js",
+    "build:api": "cross-env NODE_ENV=production webpack --config webpack.api.js",
     "serve:api-dev": "nodemon ./dist/api/api.js"
   },
   "author": "Jonathan Guo <chc.jonathan.guo@outlook.com>",
