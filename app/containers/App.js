@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import animateScrollTo from 'animated-scroll-to';
-import { AboutMe, Experiences, ProfessionalSkills, PersonalSkills, SchoolarshipAwards } from '../components/sections';
+import { AboutMe, Experiences, ProfessionalSkills, PersonalSkills, SchoolarshipAwards, ContactMe } from '../components/sections';
 import { action } from '../config/Store';
 import get from 'lodash/get';
 
@@ -33,6 +33,10 @@ class App extends PureComponent {
                 <ProfessionalSkills data={professionalSkills} />
                 <PersonalSkills data={personalSkills} />
                 <SchoolarshipAwards data={schoolarship} />
+                <ContactMe
+                    sending={this.props.sendingMessage}
+                    response={this.props.contactMeResponse}
+                />
             </div>
         );
     }
@@ -48,6 +52,8 @@ App.propTypes = {
     match: PropTypes.shape({
         params: PropTypes.object,
     }).isRequired,
+    sendingMessage: PropTypes.bool.isRequired,
+    contactMeResponse: PropTypes.object.isRequired,
 };
 
 App.defaultProps = {
@@ -64,4 +70,6 @@ App.defaultProps = {
 
 export default connect(store => ({
     data: store.Data.data,
+    sendingMessage: store.ContactMe.sending,
+    contactMeResponse: store.ContactMe.response,
 }))(App);

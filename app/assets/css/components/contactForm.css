@@ -1,0 +1,57 @@
+.form {
+    @apply .w-full .max-w-lg .mt-6;
+
+    .form-row {
+        @apply .flex .flex-wrap .-mx-3 .mb-6;
+
+        .form-group {
+            @apply .w-full .px-3;
+        }
+
+        .control-label {
+            @apply .block .uppercase .tracking-wide .text-grey-darker .text-xs .font-bold .mb-2;
+        }
+
+        .form-control {
+            @apply .appearance-none .block .w-full .bg-grey-lighter .text-grey-darker .border .rounded .py-3 .px-4 .mb-3;
+        }
+
+        .has-error {
+            .control-label {
+                color: config('colors.red');
+            }
+
+            .form-control {
+                @apply .border-red;
+
+                &:focus {
+                    outline: config('colors.red') .1rem solid;
+                }
+            }
+
+            .error-message {
+                color: config('colors.red');
+            }
+        }
+    }
+
+    button[type="submit"] {
+        @apply .py-2 .px-4 rounded .my-4;
+        color: #fff;
+        background-color: config('colors.black');
+        transition: background-color 400ms ease-in-out;
+
+        &:hover {
+            background-color: var(--secondaryColor);
+        }
+
+        &:disabled {
+            cursor: not-allowed;
+            background-color: config('colors.grey-light');            
+
+            &:hover {
+                background-color: config('colors.grey-light');
+            }
+        }
+    }
+}

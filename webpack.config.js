@@ -145,10 +145,14 @@ const config = {
     },
 
     plugins: [
-        new webpack.DefinePlugin(Object.assign({
+        new webpack.DefinePlugin({
             __DEV__: true,
-            'process.env.NODE_ENV': JSON.stringify('development'),
-        }, dotEnvConfig)),
+            'process.env': {
+                ...process.env,
+                NODE_ENV: JSON.stringify('development'),
+                ...dotEnvConfig,
+            },
+        }),
         new webpack.LoaderOptionsPlugin({
             test: /\.js$/,
             options: {

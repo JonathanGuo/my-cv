@@ -1,4 +1,4 @@
-import { fetchProfile } from '../../app/sagas';
+import { fetchProfile } from '../../app/sagas/Profile';
 import { expectSaga } from 'redux-saga-test-plan';
 import profile from '../../app/assets/data/profile.json';
 
