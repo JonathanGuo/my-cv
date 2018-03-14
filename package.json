@@ -23,7 +23,6 @@
     "setupFiles": [
       "<rootDir>/config/jest/shim.js"
     ],
-    "mapCoverage": true,
     "collectCoverageFrom": [
       "app/**/*.{js,jsx,ts,tsx}"
     ],
