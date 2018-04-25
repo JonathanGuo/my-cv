@@ -177,9 +177,23 @@
         {
             "jobTitle": "Software Developer",
             "type": "Permanent",
+            "company": "Webtools",
+            "url": "http://webtools.co.nz",
+            "startDate": "2018-04-16",
+            "description": [
+                "Develop and maintain softwares as required.",
+                "Maintain and improve the performance of databases",
+                "Software Testing",
+                "Prepare presentations, reports, proposals and other documens as required."
+            ]
+        },
+        {
+            "jobTitle": "Software Developer",
+            "type": "Permanent",
             "company": "WSP | Opus",
             "url": "http://wsp-opus.co.nz",
             "startDate": "2015-10-27",
+            "endDate": "2018-04-13",
             "description": [
                 "Develop, maintain and improve upon databases for various internal and external applications.",
                 "Analyse existing applications or works to formulate logic for new applications, devises logic procedures, prepares flowcharting, performs coding, data analysis, and tests/debugs programs through the application of professional programming concepts.",
